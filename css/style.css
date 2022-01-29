@@ -8,15 +8,16 @@
     --black-color: #000000;
     --google-color: #ff0000;
     --facebook-color: #0029ff;
+    --twitter-color: #00acee;
     --trans: all ease 0.3s;
     --input-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
     --button-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
     --form-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
     --placeholder-font: 12px;
     --button-font: 18px;
-    --text-font: 15px;
+    --text-font: 17px;
     --heading-font: 35px;
-    --para-font: 10px;
+    --para-font: 14px;
 }
 html,
 body {
@@ -38,7 +39,7 @@ body {
     -ms-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     border-radius: 15px;
-    box-shadow: var(--form-box-sahdow);
+    box-shadow: var(--form-box-shadow);
 }
 .form-control {
     display: block;
@@ -68,23 +69,152 @@ input::placeholder {
     font-size: var(--button-font);
     letter-spacing: 2px;
     border-radius: 0.2rem;
+    cursor: pointer;
     border: 1px solid var(--main-color);
     background-color: var(--main-color);
     color: var(--white-color);
+    transition: var(--trans);
 }
 .btn-login:hover {
     border: 1px solid var(--main-color-hover);
     background-color: var(--main-color-hover);
     box-shadow: var(--button-box-shadow);
 }
+.btn-login:focus {
+    outline: none;
+}
 .login-with-section p {
     font-size: var(--para-font);
     color: var(--grey-color);
+    position: relative;
 }
-.login-with-section .social-btn-google {
+.login-with-section p::before {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    z-index: -1;
+    border-radius: 100%;
+    background-color: var(--grey-color);
+    transform: translate(-50%);
+}
+.login-with-section p::after {
+    content: "Or Login With";
+    background-color: var(--white-color);
+    z-index: 1;
+    padding: 1px 7px;
+}
+i {
+    font-size: 25px;
+}
+.fa {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.fa-facebook-f {
+    background-color: var(--facebook-color);
+    color: var(--white-color);
+    border: 1px solid var(--facebook-color);
+    border-radius: 100%;
+    padding: 9px 13px;
+    transition: var(--trans);
+}
+.fa-facebook-f:hover {
+    border: 1px solid var(--facebook-color);
+    color: var(--facebook-color);
+    background-color: transparent;
+    box-shadow: var(--button-box-shadow);
+}
+.fa-twitter {
+    background-color: var(--twitter-color);
+    color: var(--white-color);
+    border: 1px solid var(--twitter-color);
+    border-radius: 100%;
+    padding: 9px 10px;
+    transition: var(--trans);
+}
+.fa-twitter:hover {
+    border: 1px solid var(--twitter-color);
+    color: var(--twitter-color);
+    background-color: transparent;
+    box-shadow: var(--button-box-shadow);
+}
+.fa-google {
     background-color: var(--google-color);
     color: var(--white-color);
-    border: none;
+    border: 1px solid var(--google-color);
     border-radius: 100%;
-    padding: 20px;
+    padding: 9px 10px;
+    transition: var(--trans);
+}
+.fa-google:hover {
+    border: 1px solid var(--google-color);
+    color: var(--google-color);
+    background-color: transparent;
+    box-shadow: var(--button-box-shadow);
+}
+.footer-content-section .tnc {
+    font-size: var(--para-font);
+    color: var(--grey-color);
+    display: flex;
+    justify-content: space-between;
+}
+.footer-content-section .tnc span {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.footer-content-section .password {
+    font-size: var(--para-font);
+    color: var(--grey-color);
+    position: relative;
+}
+.footer-content-section .password::after {
+    position: absolute;
+    content: "";
+    bottom: -6px;
+    left: 50%;
+    background-color: var(--grey-color);
+    padding: 1px;
+    width: 150px;
+    border-radius: 100%;
+    transform: translate(-50%);
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::: media query for mobile and tab start*/
+@media (max-width: 1296px) {
+    .body-section {
+        width: 25%;
+    }
+}
+@media (max-width: 1036px) {
+    .body-section {
+        width: 30%;
+    }
+}
+@media (max-width: 865px) {
+    .body-section {
+        width: 35%;
+    }
+}
+@media (max-width: 745px) {
+    .body-section {
+        width: 50%;
+    }
+}
+@media (max-width: 530px) {
+    .body-section {
+        width: 70%;
+    }
+}
+@media (max-width: 370px) {
+    .body-section {
+        width: 80%;
+    }
+}
+@media (max-width: 370px) {
+    .body-section {
+        width: 83%;
+    }
 }
