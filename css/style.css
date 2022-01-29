@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+    --background-color: #eef3f7;
+    --main-color: #1c153e;
+    --main-color-hover: #1c0872;
+    --grey-color: #c4c4c4;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --google-color: #ff0000;
+    --facebook-color: #0029ff;
+    --trans: all ease 0.3s;
+    --input-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+    --button-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+    --form-box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+    --placeholder-font: 12px;
+    --button-font: 18px;
+    --text-font: 15px;
+    --heading-font: 35px;
+    --para-font: 10px;
+}
+html,
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+}
+.body-section {
+    background-color: var(--white-color);
+    width: 20%;
+    text-align: center;
+    height: auto;
+    padding: 10px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    border-radius: 15px;
+    box-shadow: var(--form-box-sahdow);
+}
+.form-control {
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid var(--main-color);
+    border-radius: 0.2rem;
+    width: 100%;
+    height: 35px;
+    margin: 1rem auto;
+    padding: 0.7rem;
+    color: var(--black-color);
+    transition: var(--trans);
+}
+.form-control:focus {
+    outline: none;
+    box-shadow: var(--input-box-shadow);
+}
+input::placeholder {
+    color: var(--grey-color);
+    font-size: var(--placeholder-font);
+    letter-spacing: 1px;
+}
+.btn-login {
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-size: var(--button-font);
+    letter-spacing: 2px;
+    border-radius: 0.2rem;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    color: var(--white-color);
+}
+.btn-login:hover {
+    border: 1px solid var(--main-color-hover);
+    background-color: var(--main-color-hover);
+    box-shadow: var(--button-box-shadow);
+}
+.login-with-section p {
+    font-size: var(--para-font);
+    color: var(--grey-color);
+}
+.login-with-section .social-btn-google {
+    background-color: var(--google-color);
+    color: var(--white-color);
+    border: none;
+    border-radius: 100%;
+    padding: 20px;
+}
